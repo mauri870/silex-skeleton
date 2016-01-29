@@ -14,7 +14,7 @@
 $app->register(new Silex\Provider\ServiceControllerServiceProvider());
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/../views',
+    'twig.path' => __DIR__.'/../resources/views',
 ));
 
 // Required for profile routes
@@ -24,7 +24,7 @@ if($app['debug'] === true){
     $app->register(new Silex\Provider\HttpFragmentServiceProvider());
 
     $app->register(new Silex\Provider\WebProfilerServiceProvider(), array(
-        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+        'profiler.cache_dir' => __DIR__.'/../storage/cache/profiler',
         'profiler.mount_prefix' => '/_profiler'
     ));
 }

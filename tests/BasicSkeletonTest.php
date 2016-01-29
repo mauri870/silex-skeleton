@@ -4,7 +4,7 @@ class BasicSkeletonTest extends Silex\WebTestCase
 {
     public function createApplication()
     {
-        $app = require __DIR__ . '/../app/app.php';
+        $app = require __DIR__ . '/../src/app.php';
         $app['debug'] = false;
         return $app;
     }

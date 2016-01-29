@@ -5,6 +5,6 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-$app = require __DIR__ . '/../app/app.php';
+$app = require __DIR__ . '/../src/app.php';
 
 $app->run();
