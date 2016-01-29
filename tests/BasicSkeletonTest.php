@@ -1,13 +1,13 @@
 <?php
 
-class BasicSkeletonTest extends Silex\WebTestCase
+namespace App\Tests;
+
+use Silex\Application;
+use Silex\WebTestCase;
+
+class BasicSkeletonTest extends WebTestCase
 {
-    public function createApplication()
-    {
-        $app = require __DIR__ . '/../src/app.php';
-        $app['debug'] = false;
-        return $app;
-    }
+    use CreateApplicationTrait;
 
     public function testCanViewInitialPage()
     {
@@ -21,7 +21,7 @@ class BasicSkeletonTest extends Silex\WebTestCase
     public function testApplicationCanBoot()
     {
         $app = $this->createApplication();
-        $this->assertEquals(new Silex\Application(),$app);
+        $this->assertEquals(new Application(),$app);
     }
 
 }
