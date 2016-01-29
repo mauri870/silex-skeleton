@@ -1,0 +1,29 @@
+{% extends "layouts/app.html.twig" %}
+
+{% block title %}Silex{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="jumbotron">
+        <h1>Welcome to Silex!</h1>
+        <p><img src="img/silex-logo.png" alt="" class="logo center-block img-responsive"></p>
+
+        <div class="row text-center col-md-8 col-md-offset-2">
+            <div class="col-md-4">
+               <a href="http://silex.sensiolabs.org/" target="_blank"><button class="btn btn-danger"><i class="fa fa-book"></i> Silex Documentation</button></a>
+            </div>
+            <div class="col-md-4">
+               <a href="http://twig.sensiolabs.org/" target="_blank"><button class="btn btn-info"><i class="fa fa-book"></i> Twig Documentation</button></a>
+            </div><div class="col-md-4">
+               <a href="https://github.com/mauri870/silex-skeleton" target="_blank"><button class="btn btn-warning"><i class="fa fa-github"></i> Fork on github!</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

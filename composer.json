@@ -1,0 +1,21 @@
+{
+    "name": "mauri870/silex-skeleton",
+    "description": "A skeleton for Silex Framework",
+    "type": "library",
+    "require": {
+        "silex/silex": "^1.3",
+        "twig/twig": "^1.24",
+        "symfony/twig-bridge": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mauri de Souza Nunes",
+            "email": "mauri870@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
