@@ -30,7 +30,7 @@ project -
         │   └── cache -- Symfony Web Profiler cache
         ├── src
         │   └── Http
-                └── routes.php  - Application Routes
+        │       └── routes.php  - Application Routes
         │   └── app.php  - Connect all application endpoints
         ├── tests
         │   └── BasicSkeletonTest.php  - Test if application can boot and return response
