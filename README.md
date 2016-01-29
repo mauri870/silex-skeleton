@@ -26,6 +26,8 @@ project -
         │   │   └── silex-logo.png
         │   ├── index.php  -- Initialize  application
         │   └── js
+        ├── storage
+        │   └── cache -- Symfony Web Profiler cache
         ├── src
         │   └── Http
                 └── routes.php  - Application Routes
