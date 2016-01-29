@@ -13,8 +13,8 @@ git clone https://github.com/mauri870/silex-skeleton.git
 This is just the beginning, all suggestions are welcome.
 ```
 project -
-        ├── bootstrap
-        │   └── app.php  - Initialize  application
+        ├── app
+        │   └── app.php  - Store all application logic
         ├── composer.json
         ├── composer.lock
         ├── config
@@ -24,7 +24,7 @@ project -
         │   ├── favicon.ico
         │   ├── img
         │   │   └── silex-logo.png
-        │   ├── index.php  -- Store all application logic
+        │   ├── index.php  -- Initialize  application
         │   └── js
         ├── tests
         └── views
