@@ -9,6 +9,4 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-require_once __DIR__.'/../config/providers.php';
-
 return $app;

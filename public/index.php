@@ -9,6 +9,9 @@ $app = require __DIR__.'/../bootstrap/app.php';
 
 $app['debug'] = true;
 
+require_once __DIR__.'/../config/providers.php';
+
+
 /*
  * Application Routes
  * */
