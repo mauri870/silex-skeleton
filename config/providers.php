@@ -9,9 +9,7 @@
  * Register application Service Providers
  * */
 
-$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
-$app->register(new Silex\Provider\HttpFragmentServiceProvider());
 
 $app->register(new Silex\Provider\ServiceControllerServiceProvider());
 
@@ -19,7 +17,14 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
 ));
 
-$app->register(new Silex\Provider\WebProfilerServiceProvider(), array(
-    'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-    'profiler.mount_prefix' => '/_profiler', // this is the default
-));
+// Required for profile routes
+if($app['debug'] === true){
+    $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+
+    $app->register(new Silex\Provider\HttpFragmentServiceProvider());
+
+    $app->register(new Silex\Provider\WebProfilerServiceProvider(), array(
+        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+        'profiler.mount_prefix' => '/_profiler'
+    ));
+}
