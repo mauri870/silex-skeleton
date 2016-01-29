@@ -15,8 +15,6 @@ git clone https://github.com/mauri870/silex-skeleton.git
 This is just the beginning, all suggestions are welcome.
 ```
 project -
-        ├── app
-        │   └── app.php  - Store all application logic
         ├── composer.json
         ├── composer.lock
         ├── config
@@ -28,9 +26,16 @@ project -
         │   │   └── silex-logo.png
         │   ├── index.php  -- Initialize  application
         │   └── js
+        ├── src
+        │   └── Http
+                └── routes.php  - Application Routes
+        │   └── app.php  - Connect all application endpoints
         ├── tests
-        └── views
-            ├── index.html.twig  -- Index test page
-            └── layouts
-                └── app.html.twig  -- Test layout
+        │   └── BasicSkeletonTest.php  - Test if application can boot and return response
+        │   └── CreateApplicationTrait.php  - Create an application instance
+        └── resources
+            └── views
+                ├── index.html.twig  -- Index test page
+                └── layouts
+                    └── app.html.twig  -- Test layout
 ```
