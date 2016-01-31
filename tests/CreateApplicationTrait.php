@@ -13,6 +13,8 @@ trait CreateApplicationTrait
     public function createApplication()
     {
         $app = require __DIR__ . '/../src/app.php';
+        require __DIR__ . '/../config/prod.php';
+        require __DIR__ . '/../src/controllers.php';
         $app['debug'] = false;
         return $app;
     }
