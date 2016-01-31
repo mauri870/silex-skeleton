@@ -8,7 +8,11 @@
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = require __DIR__ . '/../src/app.php';
-if(php_sapi_name() === 'cli-server'){
+
+// You can disable debug on cli server commenting the line above
+$app['debug'] = true;
+
+if(php_sapi_name() === 'cli-server' && $app['debug'] == true){
     require __DIR__.'/../config/dev.php';
 }else{
     require __DIR__.'/../config/prod.php';
