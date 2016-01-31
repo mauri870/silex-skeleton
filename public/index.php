@@ -5,6 +5,14 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-$app = require __DIR__ . '/../src/app.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
+$app = require __DIR__ . '/../src/app.php';
+if(php_sapi_name() === 'cli-server'){
+    require __DIR__.'/../config/dev.php';
+}else{
+    require __DIR__.'/../config/prod.php';
+}
+
+require __DIR__.'/../src/controllers.php';
 $app->run();
