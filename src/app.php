@@ -9,11 +9,9 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-
-$app['debug'] = true;
-
-require_once __DIR__.'/../config/providers.php';
-
-require_once __DIR__.'/Http/routes.php';
+$app->register(new Silex\Provider\ServiceControllerServiceProvider());
+$app->register(new Silex\Provider\TwigServiceProvider());
+$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+$app->register(new Silex\Provider\HttpFragmentServiceProvider());
 
 return $app;
