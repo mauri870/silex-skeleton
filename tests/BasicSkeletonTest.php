@@ -22,4 +22,14 @@ class BasicSkeletonTest extends WebTestCase
 
         $this->assertCount(1, $crawler->filter('h1:contains("Welcome to Silex!")'));
     }
+
+    public function testCanRender404Page()
+    {
+        $client = $this->createClient();
+        $randomUrl = md5(microtime());
+        $crawler = $client->request('GET', '/'.$randomUrl);
+        $this->assertEquals('404',$client->getResponse()->getStatusCode(404));
+
+        $this->assertCount(1, $crawler->filter('h2:contains("Oops, parece que você está perdido!")'));
+    }
 }
