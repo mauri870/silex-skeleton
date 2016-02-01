@@ -28,7 +28,7 @@ class BasicSkeletonTest extends WebTestCase
         $client = $this->createClient();
         $randomUrl = md5(microtime());
         $crawler = $client->request('GET', '/'.$randomUrl);
-        $this->assertEquals('404',$client->getResponse()->getStatusCode(404));
+        $this->assertEquals('404',$client->getResponse()->getStatusCode());
 
         $this->assertCount(1, $crawler->filter('h2:contains("Oops, parece que você está perdido!")'));
     }
