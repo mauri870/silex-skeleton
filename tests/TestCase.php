@@ -8,7 +8,9 @@
 
 namespace App\Tests;
 
-trait CreateApplicationTrait
+use Silex\WebTestCase;
+
+class TestCase extends WebTestCase
 {
     public function createApplication()
     {

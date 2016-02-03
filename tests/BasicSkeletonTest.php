@@ -5,9 +5,8 @@ namespace App\Tests;
 use Silex\Application;
 use Silex\WebTestCase;
 
-class BasicSkeletonTest extends WebTestCase
+class BasicSkeletonTest extends TestCase
 {
-    use CreateApplicationTrait;
 
     public function testApplicationCanBoot()
     {
